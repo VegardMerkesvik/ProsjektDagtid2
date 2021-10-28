@@ -1,0 +1,11 @@
+body
+
+canvas {
+    justify-content: center;
+    height:320px; 
+    width:480px;
+    background-image: url("../bilder/sky_solid_color.png");
+}
+#game {
+    justify-content: center;
+}
