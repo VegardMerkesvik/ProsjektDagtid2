@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(55, 78, 172);
+}
+
+canvas {
+    height:520px; 
+    width:780px;
+    background-image: url("../bilder/sky_solid_color.png");
+}
+#gamecenter {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 200px;
+}
