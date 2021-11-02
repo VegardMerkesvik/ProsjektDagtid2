@@ -1,5 +1,4 @@
 
-
 collision = {
   84:function(objekt, rad, col) {
       this.floorCol(objekt, rad);
@@ -12,8 +11,8 @@ collision = {
 
   },
   83:function(objekt, rad, col) {
-    if(this.rightCol(objekt, col)){return;}
-    this.floorCol(objekt, rad);
+    if(this.floorCol(objekt, rad)){return;}
+    this.rightCol(objekt, col);
   },
   85:function(objekt, rad, col) {
     if(this.leftCol(objekt, col)){return;}
@@ -21,13 +20,15 @@ collision = {
 
   },
   100:function(objekt, rad, col) {
-    this.floorCol(objekt, rad);
+    if(this.floorCol(objekt, rad)){return;}
+    if(this.rightCol(objekt,col)){return;}
+    this.leftCol(objekt,col);
 },
   floorCol(objekt, rad) {
    if(objekt.y - objekt.old_y > 0){
         
     var bunn = rad * 32;
-
+    
        if ((objekt.y +20)> bunn  && (objekt.old_y + 20) <= bunn) {
             
         objekt.speedY = 0;
@@ -78,12 +79,12 @@ function colLoop(){
         var colValue = world.map[bunn_rad* world.col + left_col];
         
         if(colValue > 0 ) {
-            console.log(left_col + " " + bunn_rad + " " + colValue);
+            
             collision[colValue](this.spilleren, bunn_rad, left_col);
         }
 
         var right_col = Math.floor((this.spilleren.x+20)/32);
-        colValue = world.map[bunn_rad* world.columns + right_col];
+        colValue = world.map[bunn_rad* world.col + right_col];
 
         if(colValue > 0){
             
@@ -95,7 +96,7 @@ function colLoop(){
 
 
 
-//function colxLoop() {
+
     if(this.spilleren.x-this.spilleren.old_x <0) {
         var left_col = Math.floor(this.spilleren.x / 32);
         var bunn_rad = Math.floor((this.spilleren.y+20)/32);
@@ -123,5 +124,5 @@ function colLoop(){
             collision[colValue](this.spilleren, top_rad, right_col);
         }
     }
-//}
+
 }
