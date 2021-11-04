@@ -18,7 +18,7 @@ window.onload = function(){
 
   
     //dette er spilleren
-    spilleren  = new Spiller(20,20);
+    spilleren  = new Spiller(20,180);
 
 
     
@@ -37,12 +37,9 @@ window.onload = function(){
 function step() {
     
     spilleren.step();
-    
-    draw();
-
-
     colLoop();
-    
+    pos_loop();
+     draw();
 }
 function draw(){
     ctx.clearRect(0, 0, 480, 320);
