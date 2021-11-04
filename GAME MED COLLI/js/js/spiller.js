@@ -4,8 +4,8 @@ function Spiller(x, y)
     this.y = y;
     this.old_x = 0
     this.old_y = 0
-    this.width = 20;
-    this.height = 20;
+    this.width = 25;
+    this.height = 25;
     this.speedX = 0;
     this.speedY = 0;
     this.friksjon = 0.6;
@@ -20,8 +20,8 @@ function Spiller(x, y)
 
     this.step = function(){
         //spiller bevegelse
-        
-      
+     
+       
             if (!leftKey && !rightKey || leftKey && rightKey) {
                 this.speedX *= this.friksjon;
             } else if (rightKey) {
@@ -47,7 +47,8 @@ function Spiller(x, y)
             }else if(this.speedY < -this.maximumS){
                 this.speedY= -this.maximumS;
                 this.gravitySpeed = 0;
-            }
+            }      
+        
           
            
             
@@ -56,7 +57,7 @@ function Spiller(x, y)
         this.speedY += this.gravitySpeed;
         //oppdater old x og old z
             
-        this.old_x = this.x;
+     this.old_x = this.x;
         this.old_y = this.y;
 
         this.x += this.speedX;
@@ -69,13 +70,14 @@ function Spiller(x, y)
             this.x = 480-this.width;
             this.speedX=0;
         }
-        if(this.y<0){
+       /* if(this.y<0){
             this.y=0;
             this.speedY=0;
-        } else if (this.y>320-this.height) {
-            this.y = 320-this.height - 0.001;
-            this.speedY=0;
-            this.hoppe = false;
+        }
+        else*/ if (this.y>320) {
+            this.x=20;
+            this.y=180;
+
             
             
         }  
@@ -87,7 +89,6 @@ function Spiller(x, y)
 }
     
     this.draw = function() {
-        ctx.fillStyle = "blue";
-        ctx.fillRect(this.x, this.y, this.width, this.height)
+        ctx.drawImage(pos, imgx, imgy, 25, 25, this.x, this.y, 25, 25 );
     }
 }
