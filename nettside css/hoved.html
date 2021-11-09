@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>tiles</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <div id="level"></div>
+    <div id="gamecenter">
+        <canvas id="game" width="480" height="320"></canvas>
+    </div>
+    <h1>Overskrift</h1>
+
+    <ul>
+        <li onmouseover="over()" onmouseout="out()" class="hover1">Om spillet</li>
+        <li onmouseover="over1()" onmouseout="out1()" class="hover2">Regler</li>
+        <li onmouseover="over2()" onmouseout="out2()" class="hover3">Skapere</li>
+        <li onmouseover="over3()" onmouseout="out3()" class="hover4">Om prosjektet</li>
+    </ul>
+    <div>
+        <p id="cssspill" style="visibility: hidden;">Spillet handler om er frosk som letter  etter en prinsesse.</p>
+        <p id="css1spill"style="visibility: hidden;">JUMP=w eller oppover pillen
+            LEFT=a eller venstre pillen<br>
+            RIGHT=d eller høyre pillen<br>
+            DEATH=rører spikes eller faller ut av map<br>
+            NEXT level=Rør skiltet
+            </p>
+        <p id="css2spill" style="visibility: hidden;">Spillet er laget av<br> Didrik.k.Bjerkan
+            Vegard Merkesvik<br> Andreas Magnarson Nypan
+            </p>
+        <p id="css3spill" style="visibility: hidden;">Vi på gruppen diskuterte hvilket spill vi skulle lage, men til slutt så bestemte vi oss for å et plattformspill fordi det var det første vi tenkte og virket som det spillet som ville være enklest å lage.
+
+            Vi brukte github, tiled og visual studio code for å lage spillet.
+            
+            spillet er et 2D plattformspill med x levler. Målet med spillet er at frog skal vil møte en prinsesse. grunnen er at frosken vil bli et menneske igjen.
+            </p>   
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/spiller.js"></script>
+    <script src="js/nextLevel.js"></script>
+    <script src="js/new.js"></script>
+    <script src="js/movement.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/spillerimg.js"></script>
+    <script src="js/nettside.js"></script>
+</body>
+</html>
