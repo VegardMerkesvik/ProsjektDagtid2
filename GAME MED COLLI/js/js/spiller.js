@@ -26,8 +26,10 @@ function Spiller(x, y)
                 this.speedX *= this.friksjon;
             } else if (rightKey) {
                 this.speedX += 0.5;
+              
             }else if(leftKey) {
                 this.speedX -= 0.5;
+                
             }
             if(this.hoppe == false ){
                 if(upKey) {
@@ -89,6 +91,8 @@ function Spiller(x, y)
 }
     
     this.draw = function() {
+        
         ctx.drawImage(pos, imgx, imgy, 25, 25, this.x, this.y, 25, 25 );
+       
     }
 }

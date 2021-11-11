@@ -11,8 +11,8 @@ var texture;
 window.onload = function(){
     canvas=document.getElementById("game");
     ctx = canvas.getContext("2d");
-   
-
+    
+    
     //keybind
     setupKeyboard();
 

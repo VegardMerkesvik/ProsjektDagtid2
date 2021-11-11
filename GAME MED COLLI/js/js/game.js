@@ -11,8 +11,8 @@ world={
     -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
     -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
     -1,-1,-1,-1,-1,83,85,-1,-1,-1,-1,-1,-1,-1,-1,
-    -1,-1,-1,-1,-1,99,101,-1,-1,-1,-1,-1,-1,-1,-1,
-    84,84,84,84,84,100,100,84,84,84,85,-1,-1,83,84,
+    -1,-1,-1,-1,-1,99,101,-1,-1,-1,-1,-1,-1,-1,141,
+    84,84,84,84,84,100,100,84,84,49,85,-1,-1,83,84,
     100,100,100,100,100,100,100,100,100,100,101,-1,-1,99,100,
     100,100,100,100,100,100,100,100,100,100,101,-1,-1,99,100],
     width:480,
@@ -37,7 +37,7 @@ for (let index = world.map.length - 1; index > -1; -- index) {
     var destination_y = Math.floor(index / world.col) * this.tile_sheet.tile_height;
     this.buffer.drawImage(this.tile_sheet.image, source_x, source_y, this.tile_sheet.tile_width, this.tile_sheet.tile_height, destination_x, destination_y, this.tile_sheet.tile_width, this.tile_sheet.tile_height);
 }
-    
+    this.context.scale(1,1);
      this.context.drawImage(this.buffer.canvas, 0, 0, world.width, world.height, 0, 0, this.context.canvas.width, this.context.canvas.height);       
     
 };
@@ -47,7 +47,7 @@ tile_sheet.image.addEventListener("load",function(event){
 
 buffer.canvas.height = world.height;
 buffer.canvas.width  = world.width;
-loop();
+
 
 });
 tile_sheet.image.src="bilder/pixel_platform_01_tileset_final.png";

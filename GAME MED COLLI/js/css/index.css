@@ -1,0 +1,108 @@
+body{
+    background-color:#79B8FD;
+}
+
+canvas {
+    height:520px; 
+    width:780px;
+    background-color: #02A0E3;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    border:#82FAF8;
+    border-radius: 30px;
+
+
+}
+h1{
+    color: Black; 
+    font-family: 'Trocchi', serif; 
+    font-size: 65px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    margin-top: 10vh;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#02A0E3;
+    border-radius: 30px;
+}
+li{
+    display: flex;
+    float: left;
+    font-family: 'Trocchi', serif; 
+    font-size: 25px; 
+    font-weight: normal; 
+    color: black;
+    padding: 14px 188.7px;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+}
+li:hover{
+    background-color: #5bc5e9;
+}
+#cssspill{
+    position: absolute;
+    left: 50px;
+    top: 230px;
+    background-color:lightblue;
+    height:70px;
+    width: 400px;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    text-align: center;
+    text-justify: center;
+    border-style: solid;
+    border-radius:20px;
+    border-color: black;
+}
+#css1spill{
+    position: absolute;
+    left: 500px;
+    top: 230px;
+    background-color:lightblue;
+    height:auto;
+    width: 400px;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    text-align: center;
+    text-justify: center;
+    border-style: solid;
+    border-radius:20px;
+    border-color: black;
+}
+#css2spill{
+    position: absolute;
+    left: 950px;
+    top: 230px;
+    background-color:lightblue;
+    height:auto;
+    width: 400px;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    text-align: center;
+    text-justify: center;
+    border-style: solid;
+    border-radius:20px;
+    border-color: black;
+}
+#css3spill{
+    position: absolute;
+    left: 1450px;
+    top: 230px;
+    background-color:lightblue;
+    height:auto;
+    width: 400px;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    text-align: center;
+    text-justify: center;
+    border-style: solid;
+    border-radius:20px;
+    border-color: black;
+}
