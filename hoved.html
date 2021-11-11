@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>tiles</title>
+    <link rel="stylesheet" href="css/index.css"> 
+    
+</head>
+<body>
+    <h1>Overskrift</h1>
+
+
+<div id="main"></div>
+    <ul>
+        <li onmouseover="over()" onmouseout="out()">Om spillet</li>
+        <li onmouseover="over1()" onmouseout="out1()">Regler</li>
+        <li onmouseover="over2()" onmouseout="out2()">Skapere</li>
+        <li onmouseover="over3()" onmouseout="out3()">Om prosjektet</li>
+    </ul>
+    <div id="containermenu">
+        <div id="cssspill" style="visibility: hidden;">
+            Spillet handler om er frosk som er på jakt
+            etter å bli et menneske, han har hørt ryktet som
+            sier at om man kysser en EKTE prinsesse vil man
+            forvandles! Din oppgave er å få frosken frem til
+            prinsessen som befinner seg i slutten av spillet!
+        </div>
+        <div id="css1spill"style="visibility: hidden;">
+            JUMP = W eller pil opp <br>
+            LEFT = A eller venstre pil<br>
+            RIGHT = D eller høyre pil<br>
+            DEATH = Berøring av spikes eller om du faller ut av mappet<br>
+            NEXT level = Rør skiltet
+        </div>
+        <div id="css2spill" style="visibility: hidden;">
+            Spillet er laget av:<br> 
+            Didrik.k.Bjerkan <br>
+            Vegard Merkesvik<br> 
+            Andreas Magnarson Nypan
+        </div>
+        <div id="css3spill" style="visibility: hidden;">
+            Prosjektet tilhører emnet INFT1003 Webteknologi og teamarbeid (2021 HØST).
+            Prosjektet går ut på å lage et spill med webgrensesnitt med 
+            tilhørende nettside med annet innhold. Spillet vi har valgt er et platforming
+            spill. 
+
+        </div>   
+
+    <div id="messagebox">
+        <span id="level">Level 1:  </span>
+        <span id ="melding">LØP!</span>
+    </div><br>
+
+    <div id="gamecenter">
+        <canvas id="game" width="480" height="320"></canvas>
+    </div>
+</div>
+
+
+    
+    
+
+    <script src="js/game.js"></script>
+    <script src="js/spiller.js"></script>
+    <script src="js/new.js"></script>
+    <script src="js/movement.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/spillerimg.js"></script>
+    <script src="JS/nextLevel.js"></script>
+    <script src="JS/nettside.js"></script>
+</body>
+</html>
