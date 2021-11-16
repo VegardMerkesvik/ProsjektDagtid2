@@ -109,9 +109,9 @@ takCol(objekt, rad) {
     if(objekt.y - objekt.old_y < 0){
          
      var tak = (rad+1)  * 32;
-     console.log(tak + " " + rad)
+    
         if ((objekt.y )< tak  && (objekt.old_y) >= tak) {
-             console.log("ops");
+             
          objekt.speedY = 0;
          objekt.old_y = tak + 0.01 ;
          objekt.y = tak + 0.01; 
@@ -123,16 +123,17 @@ takCol(objekt, rad) {
          }
         },
 spikeCol(objekt, rad) {
-    console.log("yo");
+    
     if(objekt.y - objekt.old_y > 0){
-        console.log("after");
+       
         var bunn = rad * 32 +10 ;
          
            if ((objekt.y +25)> bunn  && (objekt.old_y + 25) <= bunn) {
-                console.log("death");
+                
             objekt.x = 20;
             objekt.y = 180; 
             timer = levelTime[LevelNum];
+            ++deathcount
             
     
             }

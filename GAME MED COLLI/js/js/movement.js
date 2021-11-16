@@ -2,9 +2,12 @@ var upKey;
 var rightKey;
 var leftKey;
 var downKey;
+var pause = false;
 
 function setupKeyboard() {
+    
     document.addEventListener("keydown", function(e){
+        if(pause == false){
         switch (e.keyCode) {
             case 87: case 38: case 32:
                 upKey = true;
@@ -18,11 +21,28 @@ function setupKeyboard() {
             case 68: case 39:
                 rightKey = true;
             break;
+           
+         }
+        }
+        if(pause == false) {
+            
+            switch (e.keyCode) {
+                case 27:
+                    pause = true;
+            }
+        }
+        else {
+           
+            switch (e.keyCode) {
+                case 27:
+                    pause = false;
+            }
         }
 
        
     });
     document.addEventListener("keyup", function(e){
+        if(pause == false){
         switch (e.keyCode) {
             case 87: case 38: case 32:
                 upKey = false;
@@ -38,7 +58,7 @@ function setupKeyboard() {
             break;
         }
 
-
+    }
        
     });
 }

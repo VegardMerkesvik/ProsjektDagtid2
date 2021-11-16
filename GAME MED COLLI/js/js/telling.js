@@ -4,6 +4,7 @@ var timer = levelTime[0];
 var deathcount = 0
 function oppteller() {
     ++fixtime
+    if(pause == false){
     if(fixtime > 29){
         console.log(fixtime);
         --timer
@@ -11,6 +12,7 @@ function oppteller() {
         fixtime = 0;
     
     }
+}
     if (timer < 0) {
  ++deathcount
  this.spilleren.x =20;

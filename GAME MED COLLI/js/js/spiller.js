@@ -79,10 +79,20 @@ function Spiller(x, y)
         else*/ if (this.y>320) {
             this.x=20;
             this.y=180;
-
+            ++deathcount
+            timer = levelTime[LevelNum];
             
             
         }  
+        // pause del
+        if(pause == true) {
+            this.x = this.old_x
+            this.y = this.old_y
+            this.speedY = 0;
+            console.log("funker");
+        }else {
+            
+        }
        
 
         
