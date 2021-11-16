@@ -48,9 +48,18 @@ var collision = {
 36:function(objekt, rad, col) {
     this.floorCol(objekt, rad);
 },
+20:function(objekt, rad, col) {
+    this.floorCol(objekt, rad);
+},
 144:function(objekt, rad, col) {
     if(this.takCol(objekt, rad)){return;}
     if(this.rightCol(objekt,col)){return;}
+    this.leftCol(objekt,col);
+
+},
+145:function(objekt, rad, col) {
+    if(this.takCol(objekt, rad)){return;}
+    if(this.floorCol(objekt, rad)){return;}
     this.leftCol(objekt,col);
 
 },
@@ -61,7 +70,7 @@ var collision = {
 },
   floorCol(objekt, rad) {
    if(objekt.y - objekt.old_y > 0){
-        console.log("bakke")
+
     var bunn = rad * 32;
     
        if ((objekt.y +25)> bunn  && (objekt.old_y + 25) <= bunn) {
@@ -123,7 +132,7 @@ spikeCol(objekt, rad) {
                 console.log("death");
             objekt.x = 20;
             objekt.y = 180; 
-           
+            timer = 0;
             
     
             }
@@ -143,6 +152,7 @@ floorFin(objekt, rad) {
             mapFunk();
             spilleren.x = 20;
             spilleren.y = 200;
+            timer = 0;
          }
          }
        },
@@ -155,6 +165,7 @@ floorFin(objekt, rad) {
             mapFunk();
             objekt.x = 20;
             objekt.y = 200;
+            timer = 0;
          }
        }
    },
@@ -167,6 +178,7 @@ floorFin(objekt, rad) {
             mapFunk();
             objekt.x = 20;
             objekt.y = 200;
+            timer = 0;
          }
      }
  },
@@ -181,6 +193,7 @@ floorFin(objekt, rad) {
             mapFunk();
             objekt.x = 20;
             objekt.y = 200;
+            timer = 0;
         
            
   

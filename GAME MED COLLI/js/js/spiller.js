@@ -10,7 +10,7 @@ function Spiller(x, y)
     this.speedY = 0;
     this.friksjon = 0.6;
     this.maximumS = 14;
-    this.maximumSX = 7;
+    this.maximumSX = 8;
     this.gravity = 0.2;
     this.hoppe = true;
     this.gravitySpeed = 0;
@@ -25,15 +25,15 @@ function Spiller(x, y)
             if (!leftKey && !rightKey || leftKey && rightKey) {
                 this.speedX *= this.friksjon;
             } else if (rightKey) {
-                this.speedX += 0.5;
+                this.speedX += 0.8;
               
             }else if(leftKey) {
-                this.speedX -= 0.5;
+                this.speedX -= 0.8;
                 
             }
             if(this.hoppe == false ){
                 if(upKey) {
-                this.speedY -= 14;
+                this.speedY -= 12;
                this.hoppe = true;
                this.gravitySpeed = 0;
                this.gravity = 0.2
@@ -92,7 +92,7 @@ function Spiller(x, y)
     
     this.draw = function() {
         
-        ctx.drawImage(pos, imgx, imgy, 25, 25, this.x, this.y, 25, 25 );
+        ctx.drawImage(pos, imgx, 0, 25, 25, this.x, this.y, 25, 25 );
        
     }
 }

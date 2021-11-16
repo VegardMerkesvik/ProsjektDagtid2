@@ -25,8 +25,8 @@ window.onload = function(){
 
     //engine for nå
     gameLoop = setInterval(step, 1000/30);
-
-
+    
+    
  
 
     
@@ -40,6 +40,7 @@ function step() {
     colLoop();
     pos_loop();
      draw();
+    oppteller();
 }
 function draw(){
     ctx.clearRect(0, 0, 480, 320);
