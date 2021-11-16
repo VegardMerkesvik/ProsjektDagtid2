@@ -1,21 +1,21 @@
 var tellerEL = document.getElementById("teller");
 var fixtime = 0;
-var timer = 0;
+var timer = levelTime[0];
 var deathcount = 0
 function oppteller() {
     ++fixtime
     if(fixtime > 29){
         console.log(fixtime);
-        ++timer
+        --timer
         tellerEL.innerHTML = "Time: " + timer ;
         fixtime = 0;
     
     }
-    if (timer > levelTime[LevelNum]-1) {
+    if (timer < 0) {
  ++deathcount
  this.spilleren.x =20;
  this.spilleren.y =180;
- timer = 0;
+ timer = levelTime[LevelNum];
  tellerEL.innerHTML = "Time: " + timer ;
 
  

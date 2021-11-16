@@ -132,7 +132,7 @@ spikeCol(objekt, rad) {
                 console.log("death");
             objekt.x = 20;
             objekt.y = 180; 
-            timer = 0;
+            timer = levelTime[LevelNum];
             
     
             }
@@ -152,7 +152,7 @@ floorFin(objekt, rad) {
             mapFunk();
             spilleren.x = 20;
             spilleren.y = 200;
-            timer = 0;
+            timer = levelTime[LevelNum];
          }
          }
        },
@@ -165,7 +165,7 @@ floorFin(objekt, rad) {
             mapFunk();
             objekt.x = 20;
             objekt.y = 200;
-            timer = 0;
+            timer = levelTime[LevelNum];
          }
        }
    },
@@ -178,7 +178,7 @@ floorFin(objekt, rad) {
             mapFunk();
             objekt.x = 20;
             objekt.y = 200;
-            timer = 0;
+            timer = levelTime[LevelNum];
          }
      }
  },
@@ -193,7 +193,7 @@ floorFin(objekt, rad) {
             mapFunk();
             objekt.x = 20;
             objekt.y = 200;
-            timer = 0;
+            timer = levelTime[LevelNum];
         
            
   
