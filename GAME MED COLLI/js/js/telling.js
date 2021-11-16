@@ -3,6 +3,7 @@ var fixtime = 0;
 var timer = levelTime[0];
 var deathcount = 0
 function oppteller() {
+    if(levelTime[LevelNum] > 0){
     ++fixtime
     if(pause == false){
     if(fixtime > 29){
@@ -22,5 +23,5 @@ function oppteller() {
 
  
 
-    }
+    }}
 }

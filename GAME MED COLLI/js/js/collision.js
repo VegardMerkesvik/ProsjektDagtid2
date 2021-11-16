@@ -39,6 +39,12 @@ var collision = {
     if(this.leftFin(objekt, col)){return;}
     this.takFin(objekt, rad);
 },
+15:function(objekt, rad, col) {
+    if(this.floorFin(objekt,rad)){return;}
+    if(this.rightFin(objekt, col)){ return;}
+    if(this.leftFin(objekt, col)){return;}
+    this.takFin(objekt, rad);
+},
 35:function(objekt, rad, col) {
     this.floorCol(objekt, rad);
 },
@@ -49,6 +55,9 @@ var collision = {
     this.floorCol(objekt, rad);
 },
 20:function(objekt, rad, col) {
+    this.floorCol(objekt, rad);
+},
+1:function(objekt, rad, col) {
     this.floorCol(objekt, rad);
 },
 144:function(objekt, rad, col) {
@@ -153,7 +162,11 @@ floorFin(objekt, rad) {
             mapFunk();
             spilleren.x = 20;
             spilleren.y = 200;
+            if(levelTime[LevelNum] > 0 ){
             timer = levelTime[LevelNum];
+            }else {
+                tellerEL.innerHTML = "";
+            }
          }
          }
        },

@@ -89,6 +89,7 @@ function Spiller(x, y)
             this.x = this.old_x
             this.y = this.old_y
             this.speedY = 0;
+            this.gravitySpeed = 0;
             console.log("funker");
         }else {
             
