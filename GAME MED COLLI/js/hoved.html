@@ -5,55 +5,82 @@
     <meta name="viewport" content="width=device-width">
     <title>tiles</title>
     <link rel="stylesheet" href="css/index.css"> 
+    
 </head>
 <body>
-<img id="frog0" src="bilder/frog0.png" style="display: none;">
-<img id="Run0" src="bilder/Run0.png" style="display: none;">
-<img id="Jump0" src="bilder/Jump0.png" style="display: none;">
-<img id="Fall0" src="bilder/Fall0.png" style="display: none;">
-<img id="frog1" src="bilder/frog1.png" style="display: none;">
-<img id="Run1" src="bilder/Run1.png" style="display: none;">
-<img id="Jump1" src="bilder/Jump1.png" style="display: none;">
-<img id="Fall1" src="bilder/Fall1.png" style="display: none;">
-    <div id="level"></div>
-    <div id="gamecenter">
-        <canvas id="game" width="480" height="320"></canvas>
-        <p id="teller"></p>
-    </div>
+    <img id="frog0" src="bilder/frog0.png" style="display: none;">
+    <img id="Run0" src="bilder/Run0.png" style="display: none;">
+    <img id="Jump0" src="bilder/Jump0.png" style="display: none;">
+    <img id="Fall0" src="bilder/Fall0.png" style="display: none;">
+    <img id="frog1" src="bilder/frog1.png" style="display: none;">
+    <img id="Run1" src="bilder/Run1.png" style="display: none;">
+    <img id="Jump1" src="bilder/Jump1.png" style="display: none;">
+    <img id="Fall1" src="bilder/Fall1.png" style="display: none;">
+    <audio controls autoplay loop volume="0.2" style="display: none;"> <source src="sound/bgmusic.mp3" type="audio/mpeg"> </audio>
+
     <h1>Overskrift</h1>
 
-    <ul>
-        <li onmouseover="over()" onmouseout="out()" class="hover1">Om spillet</li>
-        <li onmouseover="over1()" onmouseout="out1()" class="hover2">Regler</li>
-        <li onmouseover="over2()" onmouseout="out2()" class="hover3">Skapere</li>
-        <li onmouseover="over3()" onmouseout="out3()" class="hover4">Om prosjektet</li>
-    </ul>
-    <div>
-        <p id="cssspill" style="visibility: hidden;">Spillet handler om er frosk som letter  etter en prinsesse.</p>
-        <p id="css1spill"style="visibility: hidden;">JUMP=space, w eller oppover pillen <br>
-            LEFT=a eller venstre pillen<br>
-            RIGHT=d eller høyre pillen<br>
-            DEATH=rører spikes eller faller ut av map<br>
-            NEXT level=Rør skiltet
-            </p>
-        <p id="css2spill" style="visibility: hidden;">Spillet er laget av<br> Didrik.k.Bjerkan
-            Vegard Merkesvik<br> Andreas Magnarson Nypan
-            </p>
-        <p id="css3spill" style="visibility: hidden;">Vi på gruppen diskuterte hvilket spill vi skulle lage, men til slutt så bestemte vi oss for å et plattformspill fordi det var det første vi tenkte og virket som det spillet som ville være enklest å lage.
 
-            Vi brukte github, tiled og visual studio code for å lage spillet.
-            
-            spillet er et 2D plattformspill med x levler. Målet med spillet er at frog skal vil møte en prinsesse. grunnen er at frosken vil bli et menneske igjen.
-            </p>   
+<div id="main">
+    
+    <ul>
+        <li onmouseover="over()" onmouseout="out()">Om spillet</li>
+        <li onmouseover="over1()" onmouseout="out1()">Regler</li>
+        <li onmouseover="over2()" onmouseout="out2()">Skapere</li>
+        <li onmouseover="over3()" onmouseout="out3()">Om prosjektet</li>
+    </ul>
+    <div id="containermenu">
+        <div id="cssspill" style="visibility: hidden;">
+            Spillet handler om er frosk som er på jakt
+            etter å bli et menneske, han har hørt ryktet som
+            sier at om man kysser en EKTE prinsesse vil man
+            forvandles! Din oppgave er å få frosken frem til
+            prinsessen som befinner seg i slutten av spillet!
+        </div>
+        <div id="css1spill"style="visibility: hidden;">
+            JUMP =SPACE, W eller pil opp <br>
+            LEFT = A eller venstre pil<br>
+            RIGHT = D eller høyre pil<br>
+            DEATH = Berøring av spikes eller om du faller ut av mappet<br>
+            NEXT level = Rør skiltet
+        </div>
+        <div id="css2spill" style="visibility: hidden;">
+            Spillet er laget av:<br> 
+            Didrik.k.Bjerkan <br>
+            Vegard Merkesvik<br> 
+            Andreas Magnarson Nypan
+        </div>
+        <div id="css3spill" style="visibility: hidden;">
+            Prosjektet tilhører emnet INFT1003 Webteknologi og teamarbeid (2021 HØST).
+            Prosjektet går ut på å lage et spill med webgrensesnitt med 
+            tilhørende nettside med annet innhold. Spillet vi har valgt er et platforming
+            spill. 
+
+        </div>  
+       
+        <div id="status">
+            <div id="messagebox" class="cssBox">Level 1: LØP!</div>
+            <div id="teller"     class="cssBox"></div>
+            <div id="death"      class="cssBox"> </div>
+        </div>
+    <div id="gamecenter">
+        <canvas id="game" width="480" height="320"></canvas>
     </div>
+</div>  
+
+
+    
+    
+
     <script src="js/game.js"></script>
     <script src="js/spiller.js"></script>
-    <script src="js/nextLevel.js"></script>
     <script src="js/new.js"></script>
     <script src="js/movement.js"></script>
     <script src="js/collision.js"></script>
     <script src="js/spillerimg.js"></script>
-    <script src="js/nettside.js"></script>
-    <script src="js/telling.js"></script>
+    <script src="JS/nextLevel.js"></script>
+    <script src="JS/nettside.js"></script>
+    <script src="JS/telling-musikk.js"></script>
+
 </body>
 </html>
