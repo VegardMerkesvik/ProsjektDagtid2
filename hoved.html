@@ -8,10 +8,20 @@
     
 </head>
 <body>
+    <img id="frog0" src="bilder/frog0.png" style="display: none;">
+    <img id="Run0" src="bilder/Run0.png" style="display: none;">
+    <img id="Jump0" src="bilder/Jump0.png" style="display: none;">
+    <img id="Fall0" src="bilder/Fall0.png" style="display: none;">
+    <img id="frog1" src="bilder/frog1.png" style="display: none;">
+    <img id="Run1" src="bilder/Run1.png" style="display: none;">
+    <img id="Jump1" src="bilder/Jump1.png" style="display: none;">
+    <img id="Fall1" src="bilder/Fall1.png" style="display: none;">
+        
     <h1>Overskrift</h1>
 
 
-<div id="main"></div>
+<div id="main">
+    
     <ul>
         <li onmouseover="over()" onmouseout="out()">Om spillet</li>
         <li onmouseover="over1()" onmouseout="out1()">Regler</li>
@@ -27,7 +37,7 @@
             prinsessen som befinner seg i slutten av spillet!
         </div>
         <div id="css1spill"style="visibility: hidden;">
-            JUMP = W eller pil opp <br>
+            JUMP =SPACE, W eller pil opp <br>
             LEFT = A eller venstre pil<br>
             RIGHT = D eller høyre pil<br>
             DEATH = Berøring av spikes eller om du faller ut av mappet<br>
@@ -46,7 +56,7 @@
             spill. 
 
         </div>   
-
+    <p id="teller"></p>
     <div id="messagebox">
         <span id="level">Level 1:  </span>
         <span id ="melding">LØP!</span>
