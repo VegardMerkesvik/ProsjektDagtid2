@@ -1,66 +1,32 @@
-function over() {
-  var x = document.getElementById("cssspill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
+var rules = document.getElementById("info2");
+var makers = document.getElementById("info3");
+var project = document.getElementById("info4");
+var contentInfo = document.getElementById("container")
+
+rules.onclick = function change(){
+  contentInfo.innerHTML = 
+   "<div> Ny tekst</div>"+
+   "<div onclick='back()'> Tilbake </div>"
+
 }
-function out() {
-  var x = document.getElementById("cssspill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
+makers.onclick = function change(){
+  contentInfo.innerHTML =
+   "<div> Spillet handler om er frosk som er på jakt etter å bli et menneske, han har hørt ryktet som sier at om man kysser en EKTE prinsesse vil man forvandles! Din oppgave er å få frosken frem til prinsessen som befinner seg i slutten av spillet!</div>"+
+
+   "<div onclick='back()'> Tilbake </div>"
+
+}
+project.onclick = function change(){
+  contentInfo.innerHTML =
+   "<div> Ny tekst</div>"+
+
+   "<div onclick='back()'> Tilbake </div>"
+
+}
+function back(){
+  location.reload();
 }
 
-function over1() {
-  var x = document.getElementById("css1spill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
-}
-function out1() {
-  var x = document.getElementById("css1spill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
-}
-function over2() {
-  var x = document.getElementById("css2spill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
-}
-function out2() {
-  var x = document.getElementById("css2spill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
-}
-
-function over3() {
-  var x = document.getElementById("css3spill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
-}
-function out3() {
-  var x = document.getElementById("css3spill");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
+function backTofront(){
+  location.href = "Frontpage.html"
 }

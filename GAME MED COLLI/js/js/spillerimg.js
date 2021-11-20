@@ -4,15 +4,15 @@ var Jump0 = document.getElementById("Jump0");
 var Fall0 = document.getElementById("Fall0");
 var frog1 = document.getElementById("frog1");
 var Run1 = document.getElementById("Run1");
-var Jump1 = document.getElementById("Jump1");
-var Fall1 = document.getElementById("Fall1");
-var retning = 0;
+var Jump1 = document.getElementById("Jump1");// som du kan se så har vi laget bildene inn på hoved html dokumentet go grunnen for at vi gjorde dette er fodi hvis vi lastet inn bildene på js trengte den laste tid nå spilleren byttet retning og forsvant for ett kort bilde
+var Fall1 = document.getElementById("Fall1");// men når vi fikk bildene inn på documentet slik så ville alle bildene lastes inn sammen med documentet
+var retning = 0;                             
 var pos;
 var imgx = 0;
 var imgy = 0;
 var telling = 0;
 
-function pos_loop() {
+function pos_loop() { // i denne funksjonen så bytter vi på hvilket bilde som skal lages skal tegnes inn på canvaset
   if ((!leftKey && !rightKey) || (leftKey && rightKey)) {
     telling = 0;
     imgx = 0;

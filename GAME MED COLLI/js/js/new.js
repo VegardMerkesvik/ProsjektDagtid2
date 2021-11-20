@@ -25,6 +25,7 @@ function step() {
   pos_loop();
   draw();
   oppteller();
+  menu();
 }
 function draw() {
   ctx.clearRect(0, 0, 480, 320);

@@ -32,14 +32,14 @@ function Spiller(x, y) {
         this.gravity = 0.2;
       }
     }
-    if (this.speedX > this.maximumSX) {
+    if (this.speedX >= this.maximumSX) {// her har jeg gjort det slik at hvis  maks farten er nådd så vil 
       this.speedX = this.maximumSX;
-    } else if (this.speedX < -this.maximumSX) {
+    } else if (this.speedX <= -this.maximumSX) {
       this.speedX = -this.maximumSX;
     }
-    if (this.speedY > this.maximumS) {
+    if (this.speedY >= this.maximumS) {
       this.speedY = this.maximumS;
-    } else if (this.speedY < -this.maximumS) {
+    } else if (this.speedY <= -this.maximumS) {
       this.speedY = -this.maximumS;
       this.gravitySpeed = 0;
     }
@@ -52,6 +52,7 @@ function Spiller(x, y) {
     this.old_x = this.x;
     this.old_y = this.y;
 
+   //bytt posisjon 
     this.x += this.speedX;
     this.y += this.speedY;
 
@@ -62,11 +63,11 @@ function Spiller(x, y) {
       this.x = 480 - 1 - this.width;
       this.speedX = 0;
     }
-    /* if(this.y<0){
+    if(this.y<0){// treffer tak 
             this.y=0;
             this.speedY=0;
         }
-        else*/ if (this.y > 320) {
+        else if (this.y > 320) {
       this.x = 20;
       this.y = 180;
       ++deathcount;
