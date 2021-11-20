@@ -1,10 +1,12 @@
 body{
     background-color:#79B8FD;
+    line-height:1.6;
     
 }
 #main {
     display:flex;
     flex-direction:column;
+    align-items: center;
 }
 #gamecenter {
     display: flex;
@@ -18,10 +20,13 @@ body{
 
 
 #game {
-    background-color: #02A0E3;;
+    background-image: url("single_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     border:#82FAF8;
     border-radius: 30px;
     width:90vh;
+    background-repeat: no-repeat;
     
 }
 h1{
@@ -33,111 +38,46 @@ h1{
     text-align: center;
     order: 1;
 }
-
-ul{
+#Tilbake{
     display: flex;
+    background-color: lightblue;
+    padding: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius:15px;
+    border-color: black;
     justify-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: hidden;
-    background-color:#02A0E3;
-    border-radius: 30px;
-    width: auto;
-    height: 45px;
-    order: 2;
+    width: 100px;
 }
-li{
+#status {
     display: flex;
-    justify-content:stretch;
-    font-family:'Chalkduster', 'fantasy';
-    font-weight: normal; 
-    color: black;
-    font-size: larger;
-    text-decoration: none;
-    border-radius: 5px;
-    order: 3;
-}
- li:hover{
-    background-color: #5bc5e9;
-}
 
-#containermenu{
-    display: flex;
-    align-content: center;
-    align-items: flex-start;
-    min-width: 100%;
-    font-size: 25px;
-    flex-direction: row;
-    justify-content: center;
-    z-index: 1;
-    order: 4;
-
-}
-#cssspill{
-    display: flex;
-    
-    background-color:#05BEE3;
-    width: 28%;
-    min-width: 28%;
-    border-radius: 1em;
-    border: solid #666 1px;
-    padding: 0.25em;
-    z-index: 1;    
-  
-    
-}
-#css1spill {    
-    display: flex;
-    
-    background-color:#05BEE3;
-    width: 20%;
-    min-width: 20%;
-    border-radius: 1em;
-    border: solid #666 1px;
-    padding: 0.25em;
-    z-index: 1;    
-
-}
-    
-#css2spill {
-    display: flex;
-    
-    background-color:#05BEE3;
-    width: 24%;
-    min-width: 24%;
-    border-radius: 1em;
-    border: solid #666 1px;
-    padding: 0.25em;
-    z-index: 1;    
-
-}
-
-
-#css3spill {
-    display: flex;
-    
-    background-color:#05BEE3;
-    width: 24%;
-    min-width: 24%;
-    border-radius: 1em;
-    border: solid #666 1px;
-    padding: 0.25em;
-    z-index: 1;    
-  
-}
-#messagebox {
-    display: flex;
-    
     position: absolute;
     justify-content: center;
     align-items: center;
     height:60px;
-    width: 400px;
-    background-color: lightblue;
-    
+    width: 500px;
+    background-color: #69D5FF;
+    justify-content: space-evenly;
+    margin: 5px; 
+
     font-family:'Courier New', Courier, monospace;
     font-size: 30px;
     border-style: solid;
     border-radius:20px;
     border-color: black;
+}
+.cssBox {
+    display: flex;
+    background-color: lightblue;
+    padding: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius:15px;
+    border-color: black;
+}
+#teller{
+    background-color:lightblue;
 }
