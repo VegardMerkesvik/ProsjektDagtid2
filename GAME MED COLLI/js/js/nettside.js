@@ -2,6 +2,7 @@ var rules = document.getElementById("info2");
 var makers = document.getElementById("info3");
 var project = document.getElementById("info4");
 var contentInfo = document.getElementById("container")
+var regler = false;
 
 rules.onclick = function change(){
   contentInfo.innerHTML = 
@@ -29,4 +30,15 @@ function back(){
 
 function backTofront(){
   location.href = "Frontpage.html"
+}
+function keybind() {
+  if(regler == false){ pause = true;
+    regler = true;
+  document.getElementById("game").style.display = "none";
+  document.getElementById("taster-og-regler").style.display = "inline";}
+  else {pause = false;
+    regler = false;
+    document.getElementById("game").style.display = "inline";
+  document.getElementById("taster-og-regler").style.display = "none";
+  }
 }

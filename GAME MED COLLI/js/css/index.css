@@ -30,6 +30,9 @@ body{
     background-repeat: no-repeat;
     
 }
+#taster-og-regler {
+    width:45%;
+}
 h1{
     color: Black; 
     font-family:'Chalkduster', Fantasy ;
@@ -50,6 +53,18 @@ h1{
     border-color: black;
     justify-content: center;
     width: 100px;
+}
+#keybind{
+    display: flex;
+    background-color: lightblue;
+    padding: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius:15px;
+    border-color: black;
+    justify-content: center;
+    width: 200px;
 }
 #status {
     display: flex;
@@ -81,4 +96,7 @@ h1{
 }
 #teller{
     background-color:lightblue;
+}
+audio{
+    display: none;
 }

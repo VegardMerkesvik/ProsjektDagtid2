@@ -16,10 +16,11 @@
     <img id="Run1" src="bilder/Run1.png" style="display: none;">
     <img id="Jump1" src="bilder/Jump1.png" style="display: none;">
     <img id="Fall1" src="bilder/Fall1.png" style="display: none;">
-    <audio controls autoplay loop volume="0.2" style="display: none;"> <source src="sound/bgmusic.mp3" type="audio/mpeg"> </audio>
+    <audio controls autoplay="true" loop volume="0.2" allow="autoplay" > <source src="sound/bgmusic.mp3" type="audio/mpeg"> </audio>
 
     <h1>Pepe's Adventure</h1>
     <div id="Tilbake" onclick="backTofront()">Tilbake</div>
+    <div id="keybind" onclick="keybind()">Taster og regler</div>
 
 <div id="main">
         
@@ -29,7 +30,7 @@
             <div id="death"      class="cssBox"> </div>
         </div>
     <div id="gamecenter">
-        <canvas id="game" width="480" height="320"></canvas>
+        <canvas id="game" width="480" height="320"></canvas> <img src="css/taster-og-regler.png" style="display: none;" id="taster-og-regler">
     </div>
 </div>  
 

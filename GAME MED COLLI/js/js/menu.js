@@ -47,7 +47,7 @@ function menu() {
     ctx.fillStyle = "lightgreen";
     ctx.fillRect(
       canvas.width / 4,
-      (canvas.height / 1.81)+1,
+      (canvas.height / 1.81)+1.5,
       canvas.width / 2,
       canvas.height / 10
     );
@@ -63,10 +63,17 @@ function menu() {
     ctx.fillText("Close", canvas.width / 4 + 10, canvas.height / 4 + 115);
 
     ctx.fillStyle = "green";
-    ctx.fillText("Start side", canvas.width / 4 + 10, canvas.height / 4 + 85);
+    ctx.fillText("Startside", canvas.width / 4 + 10, canvas.height / 4 + 85);
   }
   if(sluttmenu == true){
    
+    ctx.fillStyle = "green";
+    ctx.fillRect(
+      canvas.width / 4,
+      canvas.height / 4,
+      canvas.width / 2,
+      canvas.height / 3
+    );
       
       ctx.fillStyle = "green";
       ctx.fillRect(
@@ -89,6 +96,13 @@ function menu() {
         canvas.width / 2,
         canvas.height / 10
       );
+      ctx.fillStyle = "lightgreen";
+      ctx.fillRect(
+        canvas.width / 4,
+        (canvas.height / 2.21) + (canvas.height / 10) +1,
+        canvas.width / 2,
+        canvas.height / 10
+      );
     
   
       ctx.font = "bold 12px Arial";
@@ -99,7 +113,10 @@ function menu() {
       ctx.fillText("Try again", canvas.width / 4 + 10, canvas.height / 4 + 55);
   
       ctx.fillStyle = "green";
-      ctx.fillText("Start side", canvas.width / 4 + 10, canvas.height / 4 + 85);
+      ctx.fillText("Startside", canvas.width / 4 + 10, canvas.height / 4 + 85);
+
+      ctx.fillStyle = "green";
+      ctx.fillText("Den totale tiden du brukte var " + totaltime, canvas.width / 4 + 10, canvas.height / 4 + 115);
     
   }
 }
