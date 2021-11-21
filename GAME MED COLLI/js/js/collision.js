@@ -218,68 +218,68 @@ var collision = { // I denne arrayen lager vi funksjoner for de forskjellige til
 };
 
 function colLoop() {
-  if (this.spilleren.y - this.spilleren.old_y > 0) {// sjekker om spilleren er i fritt fall ps dette var det vi kanskje brukte mest tid på å justere 
-    this.spilleren.hoppe = true;
+  if (spilleren.y - spilleren.old_y > 0) {// sjekker om spilleren er i fritt fall ps dette var det vi kanskje brukte mest tid på å justere 
+    spilleren.hoppe = true;
   }
 
-  if (this.spilleren.y - this.spilleren.old_y > 0) {// her sjekker spillet om spilleren går ned over og vil da sjekke tilesan som er under spilleren
-    var left_col = Math.floor(this.spilleren.x / 32);// 32 er width/height til hver tile... left_col sin code sjekker kolonne posisjonen i forhold til spill kartet (world.map) til venstre for spilleren
-    var bunn_rad = Math.floor((this.spilleren.y + 25) / 32);// 25 er  width/height for spilleren... bunn_rad sin code sjekker rad posisjonen i forhold til spill kartet (world.map) under spilleren
+  if (spilleren.y - spilleren.old_y > 0) {// her sjekker spillet om spilleren går ned over og vil da sjekke tilesan som er under spilleren
+    var left_col = Math.floor(spilleren.x / 32);// 32 er width/height til hver tile... left_col sin code sjekker kolonne posisjonen i forhold til spill kartet (world.map) til venstre for spilleren
+    var bunn_rad = Math.floor((spilleren.y + 25) / 32);// 25 er  width/height for spilleren... bunn_rad sin code sjekker rad posisjonen i forhold til spill kartet (world.map) under spilleren
     var colValue = world.map[bunn_rad * world.col + left_col];// colValue er da for å sjekke verdien til tilen som man står i dette hjørnet som er definert 
 
     if (colValue > 0) {//hvis større enn null er fordi det er ikke noe collision i lufta og tomrom er definert som 0 eller -1
-      collision[colValue](this.spilleren, bunn_rad, left_col);
+      collision[colValue](spilleren, bunn_rad, left_col);
     }
 
-    var right_col = Math.floor((this.spilleren.x + 25) / 32);//left_col sin code sjekker kolonne posisjonen i forhold til spill kartet (world.map) til right for spilleren
+    var right_col = Math.floor((spilleren.x + 25) / 32);//left_col sin code sjekker kolonne posisjonen i forhold til spill kartet (world.map) til right for spilleren
     colValue = world.map[bunn_rad * world.col + right_col];
 
     if (colValue > 0) {
-      collision[colValue](this.spilleren, bunn_rad, right_col);
+      collision[colValue](spilleren, bunn_rad, right_col);
     }
-  } else if (this.spilleren.y - this.spilleren.old_y < 0) {// denne else if-en sjekker om spilleren går oppover
-    var left_col = Math.floor(this.spilleren.x / 32);
-    var top_rad = Math.floor(this.spilleren.y / 32);//bunn_rad sin code sjekker rad posisjonen i forhold til spill kartet (world.map) over spilleren
+  } else if (spilleren.y - spilleren.old_y < 0) {// denne else if-en sjekker om spilleren går oppover
+    var left_col = Math.floor(spilleren.x / 32);
+    var top_rad = Math.floor(spilleren.y / 32);//bunn_rad sin code sjekker rad posisjonen i forhold til spill kartet (world.map) over spilleren
     var colValue = world.map[top_rad * world.col + left_col];
 
     if (colValue > 0) {
-      collision[colValue](this.spilleren, top_rad, left_col);
+      collision[colValue](spilleren, top_rad, left_col);
     }
 
-    var right_col = Math.floor((this.spilleren.x + 25) / 32);
+    var right_col = Math.floor((spilleren.x + 25) / 32);
     colValue = world.map[top_rad * world.col + right_col];
 
     if (colValue > 0) {
-      collision[colValue](this.spilleren, top_rad, right_col);
+      collision[colValue](spilleren, top_rad, right_col);
     }
   }
 
-  if (this.spilleren.x - this.spilleren.old_x < 0) {// sjekker om spilleren beveger seg mot venstre
-    var left_col = Math.floor(this.spilleren.x / 32);
-    var bunn_rad = Math.floor((this.spilleren.y + 25) / 32);
+  if (spilleren.x - spilleren.old_x < 0) {// sjekker om spilleren beveger seg mot venstre
+    var left_col = Math.floor(spilleren.x / 32);
+    var bunn_rad = Math.floor((spilleren.y + 25) / 32);
     var colValue = world.map[bunn_rad * world.col + left_col];
 
     if (colValue > 0) {
-      collision[colValue](this.spilleren, bunn_rad, left_col);
+      collision[colValue](spilleren, bunn_rad, left_col);
     }
-    var top_rad = Math.floor(this.spilleren.y / 32);
+    var top_rad = Math.floor(spilleren.y / 32);
     colValue = world.map[top_rad * world.col + left_col];
     if (colValue > 0) {
-      collision[colValue](this.spilleren, top_rad, left_col);
+      collision[colValue](spilleren, top_rad, left_col);
     }
-  } else if (this.spilleren.x - this.spilleren.old_x > 0) {// sjekker om spilleren beveger seg mot høyre
-    var right_col = Math.floor((this.spilleren.x + 25) / 32);
-    var bunn_rad = Math.floor((this.spilleren.y + 25) / 32);
+  } else if (spilleren.x - spilleren.old_x > 0) {// sjekker om spilleren beveger seg mot høyre
+    var right_col = Math.floor((spilleren.x + 25) / 32);
+    var bunn_rad = Math.floor((spilleren.y + 25) / 32);
     var colValue = world.map[bunn_rad * world.col + right_col];
 
     if (colValue > 0) {
       
-      collision[colValue](this.spilleren, bunn_rad, right_col);
+      collision[colValue](spilleren, bunn_rad, right_col);
     }
-    var top_rad = Math.floor(this.spilleren.y / 32);
+    var top_rad = Math.floor(spilleren.y / 32);
     colValue = world.map[top_rad * world.col + right_col];
     if (colValue > 0) { 
-      collision[colValue](this.spilleren, top_rad, right_col);
+      collision[colValue](spilleren, top_rad, right_col);
     }
   }
 }
