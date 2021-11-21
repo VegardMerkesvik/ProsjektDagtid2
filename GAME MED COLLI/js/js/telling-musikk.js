@@ -8,6 +8,12 @@ var totaltime = 0;
 function oppteller() {
   if (levelTime[LevelNum] > 0) {
     ++fixtime;
+    //endrer farge
+    if(timer<=3 ){
+      tellerEL.style.backgroundColor = "red";
+    } else {
+      tellerEL.style.backgroundColor = "#4cbce4";
+    }
     if (pause == false) {
       if (fixtime > 29) {// vi velger å bare bruke den intervallen som allerede eksisterer og if koden her er for å gjøre den intervallen om nærmere til sekunder
         --timer;

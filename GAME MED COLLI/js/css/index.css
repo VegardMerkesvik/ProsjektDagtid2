@@ -1,5 +1,5 @@
 body{
-    background-color:#79B8FD;
+    background-color:#3c8c9d;
     line-height:1.6;
     
 }
@@ -74,7 +74,7 @@ h1{
     align-items: center;
     height:60px;
     width: 500px;
-    background-color: #69D5FF;
+    background-color: #04a4c4;
     justify-content: space-evenly;
     margin: 5px; 
 
@@ -86,7 +86,7 @@ h1{
 }
 .cssBox {
     display: flex;
-    background-color: lightblue;
+    background-color: #4cbce4;
     padding: 10px;
     font-family:'Courier New', Courier, monospace;
     font-size: 20px;
